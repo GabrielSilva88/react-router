@@ -31,4 +31,10 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps)(Card);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        deleteCard: (id) => { dispatch({type: 'DELETE_CARD', id: id})}
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Card);
