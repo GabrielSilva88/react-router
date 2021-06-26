@@ -12,6 +12,4 @@ const rootReducer = (store = initialState, action) => {
 
 };
 
-
-
 export default rootReducer;
